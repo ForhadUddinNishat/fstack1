@@ -11,8 +11,8 @@ app.use(express.json()); //allows us to accept JSON data in the req.body
 
 app.use("/api/products", productRoutes);
 
-app.listen(5000, ()=>{
-    connectDB();
+app.listen(PORT, async()=>{
+    await connectDB();
     console.log("Server started at http://localhost:"+PORT);
     
 });
